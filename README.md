@@ -13,4 +13,4 @@ methods, `qmlRegisterSingletonType<>`, `rootContext->setContextProperty()`
 and `qmlRegisterType<>`. We'll end off with a simple benchmark showing the
 difference in startup times between the first two. 
 
-Please read the article on my website: https://raymii.org/
+Please read the article on my website: https://raymii.org/s/articles/Qt_QML_Integrate_Cpp_with_QML_and_why_ContextProperties_are_bad.html
