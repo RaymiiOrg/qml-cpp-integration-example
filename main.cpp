@@ -24,10 +24,14 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     // Singleton Example
-    TrafficLightClass trafficLightSingleton;
+    //TrafficLightClass trafficLightSingleton;
     qmlRegisterSingletonType<TrafficLightClass>("org.raymii.RoadObjects", 1, 0, "TrafficLightSingleton",
-                                     [&](QQmlEngine *, QJSEngine *) -> QObject * {
-        return &trafficLightSingleton;
+                                     [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+        Q_UNUSED(engine)
+        Q_UNUSED(scriptEngine)
+
+        TrafficLightClass *trafficLightSingleton = new TrafficLightClass();
+        return trafficLightSingleton;
     });
 
 
