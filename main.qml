@@ -2,8 +2,8 @@
  * License: GNU AGPLv3
  */
 
-import QtQuick 2.15
-import QtQuick.Window 2.15
+import QtQuick 2.12
+import QtQuick.Window 2.12
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
 // For the singleton instance
@@ -19,7 +19,7 @@ ApplicationWindow {
     visible: true
     title: qsTr("C++ Expose example, QMLRegisterSingleton vs setContextProperty")
 
-    QtObject{
+/*    QtObject {
             id: internals
             readonly property string helpText: "C++ Qt/Qml example by [raymii.org](https://raymii.org).
 
@@ -31,7 +31,7 @@ Shows different methods to expose C++ classes to QML:
 License: GNU AGPLv3
 "
     }
-
+*/
     RowLayout {
         id: rowLayout
         spacing: 5
@@ -267,8 +267,10 @@ instance #2"
         wrapMode: Text.WordWrap
     }
 
+    /*
     Component.onCompleted: {
         console.log(Date.now())
 //        Qt.callLater(Qt.quit);
     }
+    */
 }
